@@ -1,0 +1,14 @@
+f = open("input.txt", "r")
+m = f.read()
+n = m.split('\n')
+for i in range(0, len(n)):
+    for j in range(0, len(n)):
+        s = int(n[i])
+        k = int(n[j])
+        if (s+k)==2020: # for first task in 1 day
+            print(s*k)
+        for l in range(0, len(n)):
+            t=int(n[l])
+            if (s+k+t)==2020:# for second task in 1 day
+                print(s*k*t)
+                exit()
