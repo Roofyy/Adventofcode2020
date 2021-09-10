@@ -1,0 +1,24 @@
+import re
+import pandas as pd
+import itertools
+
+first_input = open('input (1).txt').read()
+split_input = first_input.split('\n')
+# print(split_input)
+count = 0
+l=0
+s=0
+for i in split_input:
+    check = re.search(r'([0-9]+)-([0-9]+)\s*([a-z]):\s*([a-z]+)', i)
+    # print(res)
+    key = check.group(3)
+    c = re.findall(check.group(3), check.group(4))
+    k =[(m.start(0)) for m in re.finditer(check.group(3), check.group(4))]
+    new_list = [x+1 for x in k]
+    exist_first = new_list.count(int(check.group(1)))
+    exist_second = new_list.count(int(check.group(2)))
+    print("f",exist_first,check.group(1),new_list)
+    print("s",exist_second,check.group(2),new_list)
+    if (exist_first != exist_second):
+        count+=1
+print(count)
