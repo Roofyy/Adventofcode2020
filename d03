@@ -41,7 +41,6 @@ for increase in my_input:
     last_arr=last_arr+cur_arr #additional previous row to current to create whole list
     
 for i in range(0,len(last_arr)):
-    # for j in range(i,len(last_arr)):
     j=i*3 #counting all the trees you would encounter for the slope right 1, down 1 
     # print(i*1)
     # print(j)
@@ -50,38 +49,26 @@ for i in range(0,len(last_arr)):
 print(first_count)
 
 for i in range(0,len(last_arr)):
-    # for j in range(i,len(last_arr)):
     j=i*1 #counting all the trees you would encounter for the slope right 3, down 1 
-    # print(i*1)
-    # print(j)
     if last_arr[i][j]=='#':
         sec_count+=1
 print(sec_count)
 
 for i in range(0,len(last_arr)):
-    # for j in range(i,len(last_arr)):
     j=i*5 #counting all the trees you would encounter for the slope right 5, down 1 
-    # print(i*1)
-    # print(j)
     if last_arr[i][j]=='#':
         third_count+=1
 print(third_count)
 
 for i in range(0,len(last_arr)):
-    # for j in range(i,len(last_arr)):
     j=i*7 #counting all the trees you would encounter for the slope right 7, down 1 
-    # print(i*1)
-    # print(j)
     if last_arr[i][j]=='#':
         fourth_count+=1
 print(fourth_count)
 
 for i in range(0,len(last_arr)):
-    # for j in range(i,len(last_arr)):
     j=i*1 #counting all the trees you would encounter for the slope right 1, down 2
     i = i*2
-    # print(i*1)
-    # print(j)
     if i <=322:
         if last_arr[i][j]=='#':
             fifth_count+=1
