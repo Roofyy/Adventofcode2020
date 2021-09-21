@@ -1,0 +1,31 @@
+import re
+
+my_input=open('input (3).txt').read().split("\n\n")
+total_count=0
+for i in my_input:
+    conv = i.split()
+    count=0
+    for word in conv:
+        # print(word)
+        check = re.search(r"(\s*[a-z]+):(\s*[#a-z0-9]+)", word)
+        if check.group(1) == 'byr':
+            count+=1
+        elif check.group(1) == 'iyr':
+            count+=1
+        elif check.group(1) == 'eyr':
+            count+=1
+        elif check.group(1) == 'ecl':
+            count+=1
+        elif check.group(1) == 'hgt':
+            count+=1
+        elif check.group(1) == 'hcl':
+            count+=1
+        elif check.group(1) == 'pid':
+            count+=1
+        if count==7: 
+            # print("count",count)
+            total_count+=1
+            break
+print(total_count)
+
+//task2
